@@ -170,7 +170,7 @@ function addBeans(e) {
   let direction = 0;
 
   if (players[row].stones[cell] > 0 && row == userTurn - 1) {
-    // A good click
+    //yoink 
     table.removeEventListener("click", addBeans);
     let currentMoveStones = players[row].stones[cell];
     let timer = 0;
@@ -186,7 +186,8 @@ function addBeans(e) {
     while (currentMoveStones > 0) {
       timer++;
       if (
-        currentMoveStones == 1 && //when finish on empty cell
+        //when finish on empty cell
+        currentMoveStones == 1 && 
         currentPlayer == row &&
         players[currentPlayer].stones[cell] == 0
       ) {
