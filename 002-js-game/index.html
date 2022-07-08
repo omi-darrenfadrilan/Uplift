@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bantumi</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Bantumi</h1>
+    </div>
+    <div class="playerTurn">
+        <h1 id="userTurn">Player</h1><br>
+    </div>
+    <div>
+        Player 1 score: <span id="player1score"> 0.</span>
+    </div>
+    <table class="container">
+        <tr id="player1Stones">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="player2Stones">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>  
+        </tr>
+    </table>
+      <div>
+        Player 2 score: <span id="player2score"> 0.</span><br>
+      </div>
+      <br>
+      <!-- HTML !-->
+    <button class="showModalBtn" role="button">
+        <span class="button-82-shadow"></span>
+        <span class="button-82-edge"></span>
+        <span class="button-82-front text">
+        How to Play
+        </span>
+    </button>
+
+    <div class="modal hidden">
+        <button class="closeModalBtn">&times;</button>
+        <h3>How to play Mancala / Bantumi</h3><br>
+        <p class="italic">
+            Instructions
+        </p><br>
+        <p class="instructions">
+            (1) The main objective of the game is to put more beans into each players scores located at the top
+            and bottom of the table. 
+            <br>
+            (2) Players takes turns to pick one of the six small pots on their side. The beans are taken from 
+            the chosen pot and dropped one by one into the other pots, proceeding in a counter-clockwise movement around the board.
+            <br>
+            That includes dropping into their own big pot - the one on the right - and the opponent's small pots. 
+            However, you never drop a bean into the opponent's big pot.
+            <br>
+            (3) This continues until all the beans picked up have been dropped off again. One of three things then happens:
+        </p>    
+            <ul>
+                <li>
+                    You drop the last bean into your own big pot. You now earn another turn. You can have as many turns as you like 
+                    in this way, while you continue to finish in the big pot.
+                </li>
+                <li>
+                    You drop the last bean into a small pot that was previously empty. This is the real meat of the game. Not only does this final bean go straight into your big pot, but also all beans from the opposite small pot of your opponent. This is stealing and it's usually the stolen beans that decide the outcome 
+                    of the game. The strategical implications of this rule are enormous.
+                </li>
+                <li>
+                    You finish anywhere else. Play switches to your opponent.
+                </li>
+            </ul>
+            <br>
+        <p class="instructions">(4) Play continues until one player has only empty pots. Then the other player empties any beans left in his own small pots into his big pot, and player's totals are counted up.</p>
+    </div>
+
+    <div class="overlay hidden"></div>
+  
+  
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: auto;
+    padding: 10px;
+}
+
+.title {
+	font-size: large;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+table {
+    width: 50%; 
+}
+  
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+    height: 100vh;
+    background: #a2ad93;
+    font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+  	font-family: 'Open Sans', sans-serif;
+  	font-weight: 300;
+  	line-height: 1.42em;
+  	color:#A7A1AE;
+  	background-color:#1F2739;
+}
+
+h1 {
+  	font-size:3em; 
+  	font-weight: 300;
+  	line-height:1em;
+  	text-align: center;
+  	color: #4DC3FA;
+}
+
+h2 {
+	font-size:1em; 
+	font-weight: 300;
+	text-align: center;
+	display: block;
+	line-height:1em;
+	padding-bottom: 2em;
+	color: #FB667A;
+}
+
+h2 a {
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #FB667A;
+	text-decoration: none;
+}
+
+.blue { 
+	color: #185875; 
+}
+
+.yellow { 
+	color: #FFF842; 
+}
+
+.container th h1 {
+	font-weight: bold;
+	font-size: 1em;
+	text-align: center;
+	color: #185875;
+}
+
+.container td {
+	font-weight: normal;
+	font-size: 1em;
+  	-webkit-box-shadow: 0 2px 2px -2px #0E1119;
+	-moz-box-shadow: 0 2px 2px -2px #0E1119;
+	box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+.container {
+	margin: auto;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	overflow: hidden;
+	width: 80%;
+	margin: 0 auto;
+  	display: table;
+  	padding: 0 0 8em 0;
+}
+
+.container td, .container th {
+	padding-bottom: 2%;
+	padding-top: 2%;
+  	padding-left:2%;  
+}
+
+/* Background-color of the odd rows */
+.container tr:nth-child(odd) {
+	background-color: #323C50;
+}
+
+/* Background-color of the even rows */
+.container tr:nth-child(even) {
+	background-color: #2C3446;
+}
+
+.container th {
+	  background-color: #1F2739;
+}
+
+.container tr:hover {
+   background-color: #464A52;
+-webkit-box-shadow: 0 6px 6px -6px #0E1119;
+	   -moz-box-shadow: 0 6px 6px -6px #0E1119;
+	        box-shadow: 0 6px 6px -6px #0E1119;
+}
+
+.container td:hover {
+  background-color: #FFF842;
+  color: #403E10;
+  font-weight: bold;
+  
+  box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+  
+  transition-delay: 0s;
+	transition-duration: 0.4s;
+	transition-property: all;
+  transition-timing-function: line;
+}
+
+@media (max-width: 800px) {
+.container td:nth-child(4),
+.container th:nth-child(4) { display: none; }
+}
+
+/* HOW TO BUTTON */
+
+/* CSS */
+.showModalBtn {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-82-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition:
+      transform
+      600ms
+      cubic-bezier(.3, .7, .4, 1);
+  }
+  
+  .button-82-edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+      to left,
+      hsl(340deg 100% 16%) 0%,
+      hsl(340deg 100% 32%) 8%,
+      hsl(340deg 100% 32%) 92%,
+      hsl(340deg 100% 16%) 100%
+    );
+  }
+  
+  .button-82-front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition:
+      transform
+      600ms
+      cubic-bezier(.3, .7, .4, 1);
+  }
+  
+  @media (min-width: 768px) {
+    .button-82-front {
+      font-size: 1.25rem;
+      padding: 12px 42px;
+    }
+  }
+  
+  .showModalBtn:hover {
+    filter: brightness(110%);
+    -webkit-filter: brightness(110%);
+  }
+  
+  .showModalBtn:hover .button-82-front {
+    transform: translateY(-6px);
+    transition:
+      transform
+      250ms
+      cubic-bezier(.3, .7, .4, 1.5);
+  }
+  
+  .showModalBtn:active .button-82-front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+  }
+  
+  .showModalBtn:hover .button-82-shadow {
+    transform: translateY(4px);
+    transition:
+      transform
+      250ms
+      cubic-bezier(.3, .7, .4, 1.5);
+  }
+  
+  .showModalBtn:active .button-82-shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+  }
+  
+  .showModalBtn:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* Modal */
+  .toggleBold {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.75rem 3.5rem;
+    border: none;
+    background-color: #02A2AA;
+    color: #fff;
+    border-radius: 2rem;
+    cursor: pointer;
+    margin: 2rem auto;
+    display: block;
+  }
+  
+  .closeModalBtn {
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+    font-size: 5rem;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  p {
+    font-size: 1.8rem;
+  }
+  
+  /* Classes */
+  
+  .hidden {
+    display: none;
+  }
+  
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+  }
+
+  .italic {
+	font-style: italic;
+  }
+
+  .instructions {
+	font-size: 16px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
